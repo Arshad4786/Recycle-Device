@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <style>
+     body {
+        background-color: #fdf9f6;
+
+    }
+     .nav {
+        display: grid;
+        grid-template-columns: 100px 160px 200px;
+        border: 2px groove;
+        padding: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+        margin: auto;
+        width: 70vw;
+
+
+    }
+    .navitems{
+        text-decoration: none;
+        color: black;
+    }
+    .navitems:hover {
+        color: orange;
+    }
+    h1 {
+        text-align: center;
+    }
+    #container {
+        border: 2px groove;
+
+        background-color: white;
+
+        width: 75vw;
+        height: auto;
+        margin: auto;
+        padding-left: 6px;
+        padding-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .boxes {
+        margin: 15px;
+        border: 2px groove;
+        height: 150px;
+        width: 150px;
+        justify-content: center;
+        transition: 0.2s;
+
+    }
+    .boxes:hover {
+        border: 2px groove orange;
+    }
+    .name{
+         text-align: center;
+    }
+    .images{
+        padding-left: 5px;
+       margin: auto;
+    }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div > <a href="#" class="navitems"> Home </a></div>
+        <div > <a href="brands.html" class="navitems"> Sell Old Mobile</a> </div>
+        <div ><a href="#" class="navitems"> Sell Old Samsung</a></div>
+       </nav>
+       <h1>Sell Old Samsung Mobile</h1>
+
+       <div id="container">   </div>
+
+    <script>
+        const contentContainer = document.getElementById('container');
+        const models = ['Galaxy A10','Galaxy A10s'];
+
+        for (let i = 0; i < 50; i++) {
+            const box = document.createElement('div');
+            box.classList.add('boxes');
+
+            const image = document.createElement('img');
+            image.classList.add('images');
+            image.src = `Samsung pictures/${i}.jpeg`;
+            // image.src = `Samsung pictures/0n.jpeg`;
+            image.alt = '';
+            image.style.height = '90%';
+
+            const name = document.createElement('p');
+            name.classList.add('name');
+            name.textContent = models[i];
+
+            box.appendChild(image);
+            box.appendChild(name);
+            contentContainer.appendChild(box);
+        }
+    </script>
+
+
+   
+</body>
+</html>

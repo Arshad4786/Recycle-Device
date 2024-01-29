@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilebecho.ai</title>
+</head>
+<style>
+    body {
+        background-color: #fdf9f6;
+
+    }
+
+    .nav1 {
+        width: 70vw;
+        margin: auto;
+
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: 100px 100px;
+        border: 2px groove;
+        padding: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+        margin: auto;
+        width: 70vw;
+    }
+    .border{
+        border: 2px groove;
+    }
+    .center{
+        text-align: center;
+    }
+    .mainbox{
+        width: 73vw;
+        margin: auto;
+        background-color: white;
+        border: 2px solid ;
+    }
+    .info-box{
+        width: 50%;
+    }
+
+
+    .img-box{
+        width: 50%;
+    }
+
+    
+    .flex{
+        display: flex;
+    }
+    .pack{
+        gap: 10px;
+    }
+
+
+   
+
+
+
+    
+</style>
+
+<body>
+
+    <div class="nav1">
+        <img src="https://www.recycledevice.com/assets/images/recycledevice.svg" alt="" height="40px">
+    </div>
+    <nav class="nav">
+        <div class="navitems"> Home</div>
+        <div class="navitems"> Sell Old Mobile</div>
+    </nav>
+    
+    <div class="mainbox">
+        <div class="upper">
+            <h1 class="center">Sell old Mobile</h1>
+        </div>
+
+        <hr>
+        <div class="flex">
+        <div class="img-box">
+            <img src="/media/{{device.get.img}}" alt="">
+        </div>
+
+        <div class="info-box">
+            <h2>SPECIFICATIONS</h2>
+            <div class="flex pack">
+            <div class="ram">
+                <p>{{device.get.name}}</p>
+            </div>
+            <div class="battery">
+                <p>6000 mah</p>
+            </div>
+            <div class="storage">
+                <p>64 GB</p>
+            </div>
+            </div>
+            <a href="predict"><button>Next</button></a>
+        </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

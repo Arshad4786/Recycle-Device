@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block company %}Apple {% endblock %}
+{% block company-head %}Sell Old Apple Mobile {% endblock %}
+
+{% block styles %}
+<style>
+</style>
+{% endblock styles %}
+
+{% block container %}
+
+    {% for i in device  %}
+    
+    <div class="boxes"> <a href="info/{{i.id}}"> <img class="images" src="/media/{{ i.img }}" alt="" height="90%"> </a>
+        <p>{{i.name}}</p>
+    </div>
+    {%endfor%}
+
+{% endblock %}

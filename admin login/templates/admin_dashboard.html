@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome to Admin Dashboard</h2>
+        <p>This is the admin area.</p>
+        <a href="/db/add">Add New Mobile Data</a>
+        <a href="/admin/logout">Logout</a>
+    </div>
+</body>
+</html>
